@@ -7,7 +7,7 @@ const getProduct = async (req, res) =>
         const productData = await productModel.find();
         if(!productData || productData.length === 0)
             return res.status(401).json({message : "empty product list !!" })
-        return res.json({productData});
+        return res.json(productData);
         
     } catch (error) {
         throw error;
