@@ -3,7 +3,7 @@ const cartModel = require('../Model/cartModel.js');
 const createOrUpdateCart = async (req, res) =>
 {   
     try {
-    console.log("inside Creeate/Update cart");   
+    console.log("inside Create/Update cart");   
     const {u_id} = req.user;
     const {productId, cartQuantity} = req.body;              //we get the parameter from cart model
     let cart = await cartModel.findOne({userId : u_id});    //we check if the current user already has an cart saved
