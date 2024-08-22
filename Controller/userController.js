@@ -4,6 +4,8 @@ const jwt = require('jsonwebtoken');
 const createUser = async (req, res) =>
 {
     try {
+        // console.log("Inside!!");
+        
         const {name, email, password} = req.body;
         const checkUser = await userModel.findOne({email})
         if(checkUser)
