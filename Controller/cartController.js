@@ -51,9 +51,10 @@ const createOrUpdateCart = async (req, res) =>
 
             cart.product[existingProduct].cartQuantity = cartQuantity;
             console.log("cart updated");
-            res.status(205).json({message : "Cart is updated"});
+            
         }
     }
+    res.status(205).json({message : "Cart is updated"});
     await cart.save();
 
     } catch (error) {
